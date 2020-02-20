@@ -120,6 +120,23 @@
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4A8-au-M6K">
+                                                <rect key="frame" x="20" y="120.5" width="334" height="6"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="vRW-Yi-ZkZ"/>
+                                                </constraints>
+                                                <color key="progressTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="trackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </progressView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="4A8-au-M6K" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" constant="20" symbolic="YES" id="HKN-31-j4e"/>
+                                            <constraint firstAttribute="trailing" secondItem="4A8-au-M6K" secondAttribute="trailing" constant="20" symbolic="YES" id="LbV-Wb-ql7"/>
+                                            <constraint firstAttribute="trailing" secondItem="4A8-au-M6K" secondAttribute="trailing" constant="20" symbolic="YES" id="MoI-Fx-GNg"/>
+                                            <constraint firstItem="4A8-au-M6K" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" constant="20" symbolic="YES" id="esw-w5-hPZ"/>
+                                            <constraint firstItem="4A8-au-M6K" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="oJb-G7-bTE"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -134,6 +151,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="progressBar" destination="4A8-au-M6K" id="pZQ-ef-2kr"/>
                         <outlet property="titleLabel" destination="XLm-5r-pSP" id="Uoi-XM-lpA"/>
                     </connections>
                 </viewController>
