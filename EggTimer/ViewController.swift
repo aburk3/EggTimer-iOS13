@@ -12,7 +12,9 @@ class ViewController: UIViewController {
 //    let softTime = 5
 //    let mediumTime = 7
 //    let hardTime = 12
-    let eggTimes = ["Soft": 300, "Medium": 420, "Hard": 720]
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    let eggTimes = ["Soft": 3, "Medium": 4, "Hard": 7]
     
     var secondsRemaining = 60
     
@@ -33,6 +35,9 @@ class ViewController: UIViewController {
         if secondsRemaining > 0 {
             print("\(secondsRemaining) seconds.")
             secondsRemaining -= 1
+        } else {
+            timer.invalidate()
+            titleLabel.text = "DONE!"
         }
     }
         
